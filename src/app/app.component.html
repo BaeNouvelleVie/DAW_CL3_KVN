@@ -1,9 +1,23 @@
-<p>app works</p>
-<nav>
-  <ul>
-    <li><button (click)="goToPregunta02()">Pregunta 02</button></li>
-    <li><button (click)="goToPregunta03()">Pregunta 03</button></li>
-  </ul>
-</nav>
 
-<router-outlet />
+<mat-toolbar color="accent">
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span (click)="goToHome()" class="clickable">CL3 DAW</span>
+  &nbsp;&nbsp;
+  <button mat-button (click)="goToPregunta02()">API RickAndMorty</button>
+  &nbsp;&nbsp;
+  <button mat-button (click)="goToPregunta03()">API Comments</button>
+
+  <span class="example-spacer"></span>
+  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+    <mat-icon>favorite</mat-icon>
+  </button>
+  <button mat-icon-button
+   class="example-icon" aria-label="Example icon-button with share icon">
+    <mat-icon>logout</mat-icon>
+  </button>
+</mat-toolbar>
+
+<hr />
+<router-outlet></router-outlet>
